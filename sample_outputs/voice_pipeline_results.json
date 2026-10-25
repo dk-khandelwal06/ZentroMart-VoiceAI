@@ -1,0 +1,37 @@
+[
+  {
+    "input_audio": "E:\\ZentroMart-VoiceAI\\sample_audio\\customer_question.m4a",
+    "processed_at": "2026-10-25T12:20:29.877096+05:30",
+    "status": "success",
+    "transcript": "what is the return policy for electronics",
+    "reply": "ZentroMart's current policy gives electronics and accessories a seven-day return window for orders delivered on or after August 1st, 2026. Orders delivered before that date retain the earlier ten-day window. Items must be unused, with their original packaging and accessories. Electronics must not be physically damaged, and screen or account locks must be removed. Please check the current policy for any additional conditions.",
+    "stt_request_id": "req_1570cbe4fa5f",
+    "transcript_file": "E:\\ZentroMart-VoiceAI\\sample_outputs\\customer_question_transcript.txt",
+    "reply_file": "E:\\ZentroMart-VoiceAI\\sample_outputs\\customer_question_reply.txt",
+    "audio_reply_file": "E:\\ZentroMart-VoiceAI\\sample_outputs\\customer_question_reply.wav",
+    "sources_file": "E:\\ZentroMart-VoiceAI\\sample_outputs\\customer_question_sources.json",
+    "sources": [
+      {
+        "source": "pol_returns_v4.md",
+        "chunk_id": 2,
+        "score": 0.617711067199707
+      },
+      {
+        "source": "pol_damaged_wrong_missing.md",
+        "chunk_id": 1,
+        "score": 0.4914291501045227
+      },
+      {
+        "source": "pol_returns_v4.md",
+        "chunk_id": 4,
+        "score": 0.4833001494407654
+      },
+      {
+        "source": "pol_returns_v4.md",
+        "chunk_id": 3,
+        "score": 0.47200557589530945
+      }
+    ],
+    "tts_bytes": 2012204
+  }
+]
