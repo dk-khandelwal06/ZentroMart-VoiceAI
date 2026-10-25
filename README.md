@@ -1,248 +1,235 @@
-\# ZentroMart — Voice AI Support Agent
+# <div align="center">🛒 ZentroMart — Voice AI Support Agent</div>
 
+<div align="center">
 
+### 🎙️ From Tokens to Transformers | VoiceOps 2026 Capstone
 
-\*\*VoiceOps 2026 Capstone | From Tokens to Transformers\*\*  
+**IIT Guwahati × Gnani.ai**
 
-\*\*IIT Guwahati × Gnani.ai\*\*
+An intelligent voice-based customer support prototype combining speech recognition, retrieval-augmented generation, and speech synthesis.
 
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/Voice_AI-FFB800?style=for-the-badge&logo=googleassistant&logoColor=black" alt="Voice AI"/>
+  <img src="https://img.shields.io/badge/RAG-6C5CE7?style=for-the-badge&logo=databricks&logoColor=white" alt="RAG"/>
+  <img src="https://img.shields.io/badge/Gnani.ai-111111?style=for-the-badge&logoColor=white" alt="Gnani.ai"/>
+</p>
 
+[🚀 Explore Repository](https://github.com/dk-khandelwal06/ZentroMart-VoiceAI) · [👨‍💻 Developer Profile](https://github.com/dk-khandelwal06) · [💼 LinkedIn](https://www.linkedin.com/in/daksh-khandelwal-b02748391/)
 
-\## Overview
+</div>
 
+---
 
+## 🌟 Overview
 
-ZentroMart Voice AI Support Agent is a voice-based customer support prototype designed to answer customer questions using a retrieval-augmented knowledge base and connect customer requests to mock business tools.
+ZentroMart Voice AI Support Agent is a voice-based customer support prototype designed to answer customer questions using a knowledge base and connect customer requests to mock business tools.
 
+The system brings together speech recognition, knowledge retrieval, conversation handling, order verification, ticket creation, and speech synthesis in one workflow.
 
+## ✨ Key Features
 
-The project combines speech recognition, knowledge retrieval, conversation handling, and speech synthesis in a single pipeline.
+<table>
+<tr>
+<td width="50%">
 
+### 🎤 Speech-to-Text
+Converts customer audio into text using Gnani.ai STT.
 
+</td>
+<td width="50%">
 
-\## Key Features
+### 🧠 Knowledge Retrieval
+Uses Sentence Transformers and FAISS to retrieve relevant knowledge-base passages.
 
+</td>
+</tr>
+<tr>
+<td width="50%">
 
+### 🔐 Order Verification
+Requires successful identity verification before protected order information is disclosed.
 
-\- \*\*Speech-to-text:\*\* Transcribes customer audio using Gnani.ai STT.
+</td>
+<td width="50%">
 
-\- \*\*Knowledge retrieval:\*\* Uses sentence embeddings and a FAISS index to retrieve relevant knowledge-base passages.
+### 🎫 Ticket Creation
+Connects customer requests to the supplied mock ticket-creation tool.
 
-\- \*\*Customer support conversation:\*\* Handles policy questions and order-related requests.
+</td>
+</tr>
+<tr>
+<td width="50%">
 
-\- \*\*Order verification:\*\* Requires an approved verification value before disclosing protected order information.
+### 🔊 Text-to-Speech
+Generates spoken customer-support responses using Gnani.ai TTS.
 
-\- \*\*Ticket creation:\*\* Integrates with the supplied mock ticket tool.
+</td>
+<td width="50%">
 
-\- \*\*Text-to-speech:\*\* Generates a spoken response using Gnani.ai TTS.
+### 📚 Source Tracking
+Saves retrieved source information alongside generated responses.
 
-\- \*\*Source output:\*\* Saves retrieved source information alongside the response for inspection.
+</td>
+</tr>
+</table>
 
+## ⚙️ How It Works
 
+<div align="center">
 
-\## Architecture
+**🎙️ Customer Audio**  
+↓  
+**🗣️ Gnani.ai Speech-to-Text**  
+↓  
+**💬 Conversation Agent**  
+↓  
+**🔎 RAG Retrieval — Sentence Transformers + FAISS**  
+↓  
+**🛠️ Mock Business Tools — Verification & Tickets, When Needed**  
+↓  
+**🔊 Gnani.ai Text-to-Speech**  
+↓  
+**✅ Spoken Response + Saved Artifacts**
 
+</div>
 
+## 🧰 Technology Stack
 
-1\. Customer audio is provided to the voice pipeline.
+<div align="center">
 
-2\. Gnani.ai STT converts the audio into text.
+| Technology | Purpose |
+|:---:|---|
+| 🐍 Python | Core application |
+| 🎙️ Gnani.ai STT | Speech recognition |
+| 🔊 Gnani.ai TTS | Speech generation |
+| 🧠 Sentence Transformers | Text embeddings |
+| 🔎 FAISS | Similarity-based retrieval |
+| 📊 Pandas & NumPy | Data processing |
+| 🤖 Google GenAI SDK | Generative AI integration |
+| 🔑 Python dotenv | Environment configuration |
 
-3\. The conversation agent processes the customer request.
+</div>
 
-4\. The RAG pipeline retrieves relevant passages from the knowledge base.
-
-5\. The agent responds to the customer and invokes mock business tools when appropriate.
-
-6\. Gnani.ai TTS generates an audio response.
-
-7\. The pipeline saves the transcript, response, audio, sources, and run metadata.
-
-
-
-\## Technology Stack
-
-
-
-\- Python
-
-\- Gnani.ai STT and TTS
-
-\- Sentence Transformers
-
-\- FAISS
-
-\- Pandas and NumPy
-
-\- Google GenAI SDK
-
-\- Python dotenv
-
-
-
-\## Project Structure
-
-
+## 📂 Project Structure
 
 ```text
-
 ZentroMart-VoiceAI/
-
 ├── src/
-
 │   ├── baseline.py
-
-│   ├── conversation\_agent.py
-
-│   ├── evaluate\_baseline.py
-
-│   ├── rag\_chatbot.py
-
-│   ├── rag\_pipeline.py
-
-│   └── voice\_pipeline.py
-
-├── sample\_audio/
-
-├── sample\_outputs/
-
+│   ├── conversation_agent.py
+│   ├── evaluate_baseline.py
+│   ├── rag_chatbot.py
+│   ├── rag_pipeline.py
+│   └── voice_pipeline.py
+├── sample_audio/
+├── sample_outputs/
 ├── outputs/
-
-│   ├── baseline\_results.csv
-
-│   └── rag\_index/
-
+│   ├── baseline_results.csv
+│   └── rag_index/
 ├── reports/
-
+│   └── FINAL_REPORT.md
 ├── docs/
-
 ├── .env.example
-
 ├── .gitignore
-
 ├── requirements.txt
-
 ├── run.py
-
 └── README.md
-
 ```
 
+## 🚀 Getting Started
 
-
-\## Setup
-
-
-
-\### 1. Create and activate a virtual environment
-
-
+### 1. Clone the Repository
 
 ```bash
-
-python -m venv .venv
-
+git clone https://github.com/dk-khandelwal06/ZentroMart-VoiceAI.git
+cd ZentroMart-VoiceAI
 ```
 
+### 2. Create a Virtual Environment
 
+```bash
+python -m venv .venv
+```
 
-Windows CMD:
-
-
+Activate it on Windows CMD:
 
 ```cmd
-
-.venv\\Scripts\\activate
-
+.venv\Scripts\activate
 ```
 
-
-
-\### 2. Install dependencies
-
-
+### 3. Install Dependencies
 
 ```bash
-
 python -m pip install -r requirements.txt
-
 ```
 
+### 4. Configure API Keys
 
+Create a local `.env` file using `.env.example` as a reference, then add the API credentials required by the integrations.
 
-\### 3. Configure environment variables
+**🔒 Never commit your `.env` file or publish API keys.**
 
+### 5. Configure the Dataset
 
+Extract the supplied VoiceOps capstone dataset and ensure the application can access its knowledge-base documents and mock tools. Update the dataset path in the source configuration if required.
 
-Create a local `.env` file based on `.env.example` and provide the API keys required by the integrations.
+### 6. Run the Voice Pipeline
 
-
-
-\*\*Never commit `.env` or expose API keys in source code, screenshots, logs, or a public repository.\*\*
-
-
-
-\### 4. Configure the dataset
-
-
-
-Extract the supplied VoiceOps capstone dataset and ensure the application can access its knowledge-base documents and mock tools. Update the dataset path in the source configuration if the dataset is located somewhere other than the path used during development.
-
-
-
-\### 5. Run the voice pipeline
-
-
-
-With a supported sample audio file in `sample\_audio/`, run:
-
-
+Place a supported audio file in `sample_audio/`, then execute:
 
 ```bash
-
 python run.py
-
 ```
 
+Generated transcripts, text responses, audio responses, source information, and run metadata are saved in `sample_outputs/`.
 
+## 🔐 Safety & Reliability
 
-The pipeline processes the input audio and writes the generated transcript, response, audio, source information, and run metadata to `sample\_outputs/`.
+- Verify customer identity before disclosing protected order information.
+- Confirm ticket creation using the mock tool's returned status.
+- Ground customer-facing policy responses in the applicable knowledge base.
+- Use current policy documents rather than superseded versions.
+- Keep credentials and private customer information out of public version control.
 
+## ⚠️ Limitations
 
+This project is a capstone prototype that relies on the supplied dataset, configured API credentials, external speech services, and mock business tools. It is not represented as a production-ready customer-support system.
 
-Check `python run.py --help` if you need to inspect the supported command-line options.
+## 📑 Project Report & Demo Artifacts
 
+- **Final Report:** [`reports/FINAL_REPORT.md`](reports/FINAL_REPORT.md)
+- **Sample Transcript:** [`sample_outputs/customer_question_transcript.txt`](sample_outputs/customer_question_transcript.txt)
+- **Sample Response:** [`sample_outputs/customer_question_reply.txt`](sample_outputs/customer_question_reply.txt)
+- **Generated Voice Response:** [`sample_outputs/customer_question_reply.wav`](sample_outputs/customer_question_reply.wav)
+- **Retrieved Sources:** [`sample_outputs/customer_question_sources.json`](sample_outputs/customer_question_sources.json)
 
+---
 
-\## Security and Reliability
+<div align="center">
 
+## 👨‍💻 About the Developer
 
+<img src="https://img.shields.io/badge/Student-IIT%20Jodhpur-FFB800?style=for-the-badge" alt="IIT Jodhpur"/>
+<img src="https://img.shields.io/badge/Field-Applied%20AI%20%26%20Data%20Science-6C5CE7?style=for-the-badge" alt="Applied AI and Data Science"/>
 
-\- Protected order details should only be disclosed after successful identity verification.
+### **Daksh Khandelwal**
 
-\- Ticket creation should be confirmed using the mock tool's returned status.
+**B.S. in Applied Artificial Intelligence & Data Science**  
+*Indian Institute of Technology Jodhpur (IIT Jodhpur)*
 
-\- Customer-facing policy responses should be grounded in the applicable knowledge-base documents.
+📧 **Email:** [dk.khandelwaliitj@gmail.com](mailto:dk.khandelwaliitj@gmail.com)
 
-\- Superseded policy documents should not be treated as current policy.
+🐙 **GitHub:** [dk-khandelwal06](https://github.com/dk-khandelwal06)
 
-\- API keys and private customer data must not be committed to version control.
+💼 **LinkedIn:** [Connect with me](https://www.linkedin.com/in/daksh-khandelwal-b02748391/)
 
+🌐 **Project Repository:** [ZentroMart-VoiceAI](https://github.com/dk-khandelwal06/ZentroMart-VoiceAI)
 
+---
 
-\## Limitations
+*Building practical AI solutions, one project at a time. 🚀*
 
+⭐ If you find this project interesting, consider starring the repository!
 
-
-This is a capstone prototype using a supplied dataset and mock business tools. Its behavior depends on the availability of the configured dataset, API credentials, and external speech services. Responses and tool outcomes should be validated before use in a production customer-support environment.
-
-
-
-\## Deliverables
-
-
-
-The repository contains the application source code, setup instructions, generated project artifacts, and sample voice-pipeline outputs. Refer to the `reports/` and `docs/` directories for the final submission materials.
-
-
-
+</div>
