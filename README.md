@@ -20,6 +20,21 @@ An intelligent voice-based customer support prototype combining speech recogniti
 </div>
 
 ---
+<p align="center">
+  <img
+    src="docs/zentromart-voice-ai-architecture.png"
+    alt="ZentroMart Voice AI Support Agent — System Architecture"
+    width="900"
+  />
+</p>
+
+<p align="center">
+  <em>
+    Voice AI workflow: Speech-to-Text → RAG → Conversation Agent →
+    Business Tools → Text-to-Speech
+  </em>
+</p>
+---
 
 ## 🌟 Overview
 
